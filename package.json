@@ -1,0 +1,11 @@
+{
+	"name": "ali-dd-helper",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "git@github.com:taoqf/ali-dd-helper.git",
+	"author": "taoqiufeng <taoqiufeng@ifeidao.com>",
+	"license": "MIT",
+	"dependencies": {
+		"lodash-ts": "^1.2.2"
+	}
+}

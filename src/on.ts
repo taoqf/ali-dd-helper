@@ -1,9 +1,25 @@
 import { createHandle, createCompositeHandle } from './lang';
-import { EventObject, Handle, EventEmitter, EventCallback } from './interfaces';
 
-interface DOMEventObject extends EventObject {
+export interface DOMEventObject extends EventObject {
 	bubbles: boolean;
 	cancelable: boolean;
+}
+
+export interface EventObject {
+	type: string;
+}
+
+export interface Handle {
+	destroy(this: Handle): void;
+}
+
+export interface EventCallback {
+	(event: EventObject): void;
+}
+
+export interface EventEmitter {
+	on(event: string, listener: EventCallback): EventEmitter;
+	removeListener(event: string, listener: EventCallback): EventEmitter;
 }
 
 export class Evented {
